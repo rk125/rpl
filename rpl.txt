@@ -1,0 +1,13 @@
+route-policy xxx-import
+  if (destination in xxx-denied-prefixes) then
+    drop
+  elseif extcommunity rt matches-any target1 then
+    pass
+  elseif destination in allowed-list1 and extcommunity rt matches-any target1 then
+    pass
+  elseif destination in allowed-list2 and extcommunity rt matches-any target2 then
+    pass
+  else
+    drop
+  endif
+end-policy

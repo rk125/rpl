@@ -1,0 +1,9 @@
+    <config>
+      <routing-policy xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-um-route-policy-cfg">
+        <route-policies>
+          <route-policy xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" nc:operation="delete">
+            <route-policy-name>{{ rpl_name }}</route-policy-name>
+          </route-policy>
+        </route-policies>
+      </routing-policy>
+    </config>

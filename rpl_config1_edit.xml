@@ -1,0 +1,22 @@
+<config>
+  <routing-policy xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-um-route-policy-cfg">
+   <route-policies>
+    <route-policy {{ operation }}>
+     <route-policy-name>rk1</route-policy-name>
+     <rpl-route-policy>
+route-policy rk1
+  if med eq 127 then
+    set community (123:456) additive
+  elseif med eq 63 then
+    set community (123:789) additive
+  else
+    delete community in (123:123)
+  endif
+    pass
+end-policy
+</rpl-route-policy>
+    </route-policy>
+   </route-policies>
+  </routing-policy>
+</config>
+

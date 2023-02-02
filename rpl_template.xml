@@ -1,0 +1,12 @@
+<config>
+  <routing-policy xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-um-route-policy-cfg">
+   <route-policies>
+    <route-policy  {{ operation }}>
+     <route-policy-name>{{ rpl_name }}</route-policy-name>
+     <rpl-route-policy>
+        {{ rpl }}
+     </rpl-route-policy>
+    </route-policy>
+   </route-policies>
+  </routing-policy>
+</config>
